@@ -73,3 +73,28 @@ cd mon_env/Scripts
 * **log** : ``127.0.0.1 - - [13/Mar/2025 00:49:59] "GET / HTTP/1.1" 200 -``
   * indique qu'une requête a été reçue et traitée avec succès (200).
 
+# MicroService
+👉 [app.py](app.py)
+Le microservice "product_service" est une application web développée en Python avec Flask. Il gère une liste de produits et permet aux utilisateurs d'ajouter et de consulter ces produits via des requêtes HTTP.
+### Fonctionnalité
+Ce microservice expose deux routes principales :
+* **Route d'accueil ("/")**
+  * Méthode : **GET** : Affiche un message de bienvenue avec un lien vers la liste des produits.
+
+* **Route de gestion des produits ("/product")**
+   *  Méthode **GET** : Retourne la liste des produits sous format JSON.
+   *  Méthode **POST** : Permet d'ajouter un produit à la liste. Les données sont envoyées en JSON dans le corps de la requête.
+![Acceuil](./img/product_Acceuil.png)
+![product_list0](./img/product_list00.png)
+
+### Postman
+**Postman** est un outil qui permet de tester et d’interagir avec des API. Il facilite l’envoi de requêtes HTTP (GET, POST, PUT, DELETE) et l’affichage des réponses.
+![pstman](./img/postman.png)
+* **Configurer la requête**
+   *  **URL** : 127.0.0.1:5001/product
+   *  **Body** puis sélectionner **raw** et choisir **JSON**.
+* **Résultat :**
+![product_list1](./img/product_list01.png)
+
+* **log** : ``127.0.0.1 - - [13/Mar/2025 23:14:59] "POST /product HTTP/1.1" 200 -``
+  * Ce message indique que le serveur a bien reçu et traité une requête POST sur /product avec succès (200)
