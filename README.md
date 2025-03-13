@@ -31,7 +31,7 @@ auteur : Aghilas OULD BRAHAM
 mkdir TP # création du répértoire de travail
 cd TP/ 
 
-git init #
+git init # initialiser TP/ comme depot git
 
 # facultatives : Configurer le git
 git config user.name "aghilas"
