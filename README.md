@@ -1,7 +1,5 @@
 ----
 auteur : Aghilas OULD BRAHAM
-titre : TP : Cloud Native
-date : 02/2025
 ----
 <h3 align="center">TP : Programmation Distribué</h3>
 
