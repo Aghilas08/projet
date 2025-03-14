@@ -128,3 +128,8 @@ Le fichier **requirements.txt** est utilisé pour lister toutes les dépendances
 ### Creation de l'image doker
 * se positioner dans **TP/**
 * executer : ``docker build -t product_service . ``
+* Afficher les images docker : ``docker images``
+
+![docker_img](./img/docker_img.png)
+
+* lancer en locale : ``docker run --name "my_app" -p 4000:5001 product_service``
