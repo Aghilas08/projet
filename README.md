@@ -11,13 +11,13 @@ auteur : Aghilas OULD BRAHAM
 </p>
 <p align="center">
     <a href="https://docs.pypots.com/en/latest/install.html#reasons-of-version-limitations-on-dependencies">
-       <img alt="Python version" src="https://img.shields.io/badge/Python-v3.8+-E97040?logo=python&logoColor=white">
+       <img alt="Python version" src="https://img.shields.io/badge/Python-v3.12-E97040?logo=python&logoColor=white">
     </a>
     <a href="https://flask.palletsprojects.com/">
-       <img alt="Flask version" src="https://img.shields.io/badge/Flask-v2.0+-FF1493?logo=flask&logoColor=white">
+       <img alt="Flask version" src="https://img.shields.io/badge/Flask-v2.0.3-FF1493?logo=flask&logoColor=white">
     </a>
     <a href="https://www.docker.com/">
-       <img alt="Docker version" src="https://img.shields.io/badge/Docker-v20.10+-2496ED?logo=docker&logoColor=white">
+       <img alt="Docker version" src="https://img.shields.io/badge/Docker-v4.38.0-2496ED?logo=docker&logoColor=white">
     </a>
     <a href="https://kubernetes.io/">
        <img alt="Kubernetes version" src="https://img.shields.io/badge/Kubernetes-v1.21+-326CE5?logo=kubernetes&logoColor=white">
@@ -105,3 +105,22 @@ Ce microservice expose deux routes principales :
 
 * **log** : ``127.0.0.1 - - [13/Mar/2025 23:14:59] "POST /product HTTP/1.1" 200 -``
   * Ce message indique que le serveur a bien reçu et traité une requête POST sur /product avec succès (200)
+
+# Docker
+
+![docker](./img/docker1.png)
+
+Le code source est interprété au moment de l’exécution. Cela signifie que pour exécuter une application Python, on a besoin de :
+*  L’interpréteur Python
+*  Les fichiers source .py
+*  Les dépendances (ex: Flask, requests, etc...)
+*  Avantages de convertir le code Python en un binaire (exécutable) avant de le dockeriser :
+   *  Portabilité
+   *  Réduction de la taille de l’image Docker
+👉 [Dockerfile](Dockerfile)
+
+### Gestion des dépendances
+
+Le fichier **requirements.txt** est utilisé pour lister toutes les dépendances nécessaires pour réliser ce TP.
+
+👉 [requirements](requirements.txt)
