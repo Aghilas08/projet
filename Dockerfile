@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . /app
 
 # Installer les dépendances depuis requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 EXPOSE 4000 
 
