@@ -117,6 +117,8 @@ Le code source est interprété au moment de l’exécution. Cela signifie que p
 *  Avantages de convertir le code Python en un binaire (exécutable) avant de le dockeriser :
    *  Portabilité
    *  Réduction de la taille de l’image Docker
+
+
 👉 [Dockerfile](Dockerfile)
 
 ### Gestion des dépendances

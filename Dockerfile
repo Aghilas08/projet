@@ -9,7 +9,7 @@ COPY . /app
 # Installer les dépendances depuis requirements.txt
 RUN pip install -r requirements.txt
 
-EXPOSE 4000 
+EXPOSE 5001
 
 # Lancer l'app
 CMD ["python", "app.py"]
