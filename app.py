@@ -5,13 +5,14 @@ from flask import Flask, request, jsonify
 
 
 product_service = Flask("product_service")
-@product_service.route("/" , methods = ["GET"])
-def product() :
-    return  """
+@product_service.route("/", methods=["GET"])
+def home():
+    return """
         <h1>Bienvenue sur le service des produits</h1>
-        <p>Consultez la liste des produits ici : <a href="http://127.0.0.1:5000/product">Liste des produits</a></p>
+        <p>Consultez la liste des produits ici : <a href="http://127.0.0.1:4000/product">Liste des produits</a></p>
     """
 
+# ma liste de produit
 product = [
     {"id": 1, "name": "PC", "price": 1200},
     {"id": 2, "name": "SAMSUNG", "price": 800}
