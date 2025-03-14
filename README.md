@@ -124,3 +124,7 @@ Le code source est interprété au moment de l’exécution. Cela signifie que p
 Le fichier **requirements.txt** est utilisé pour lister toutes les dépendances nécessaires pour réliser ce TP.
 
 👉 [requirements](requirements.txt)
+
+### Creation de l'image doker
+* se positioner dans **TP/**
+* executer : ``docker build -t product_service . ``

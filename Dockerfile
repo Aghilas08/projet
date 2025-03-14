@@ -1,5 +1,5 @@
-# image python comme interpreteur
-FROM python:3 
+# image python (légere) comme interpreteur
+FROM python:3.10-slim
 
 # rep de travail
 WORKDIR /app
