@@ -9,7 +9,7 @@ product_service = Flask("product_service")
 def product() :
     return  """
         <h1>Bienvenue sur le service des produits</h1>
-        <p>Consultez la liste des produits ici : <a href="http://127.0.0.1:5001/product">Liste des produits</a></p>
+        <p>Consultez la liste des produits ici : <a href="http://127.0.0.1:5000/product">Liste des produits</a></p>
     """
 
 product = []
@@ -26,4 +26,4 @@ def product_manager() :
 
 if __name__ == "__main__" :
 
-    product_service.run(debug = True , host="0.0.0.0",port=5001)
+    product_service.run(debug = True , host='0.0.0.0',port=5000)

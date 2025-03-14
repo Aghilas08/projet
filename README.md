@@ -96,7 +96,7 @@ Ce microservice expose deux routes principales :
 ![pstman](./img/postman.png)
 
 * **Configurer la requête**
-   *  **URL** : 127.0.0.1:5001/product
+   *  **URL** : 127.0.0.1:5000/product
    *  **Body** puis sélectionner **raw** et choisir **JSON**.
 
 * **Résultat :**
@@ -134,4 +134,4 @@ Le fichier **requirements.txt** est utilisé pour lister toutes les dépendances
 
 ![docker_img](./img/docker_img.png)
 
-* lancer en locale : ``docker run --name "my_app" -p 4000:5001 product_service``
+* lancer en locale : ``docker run --name "my_app" -p 5000:5000 product_service``
