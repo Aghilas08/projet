@@ -12,7 +12,10 @@ def product() :
         <p>Consultez la liste des produits ici : <a href="http://127.0.0.1:5000/product">Liste des produits</a></p>
     """
 
-product = []
+product = [
+    {"id": 1, "name": "PC", "price": 1200},
+    {"id": 2, "name": "SAMSUNG", "price": 800}
+]
 
 @product_service.route("/product" , methods = ["GET" , "POST"])
 def product_manager() :
