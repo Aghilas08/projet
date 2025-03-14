@@ -96,7 +96,7 @@ Ce microservice expose deux routes principales :
 ![pstman](./img/postman.png)
 
 * **Configurer la requête**
-   *  **URL** : 127.0.0.1:5000/product
+   *  **URL** : 127.0.0.1:5001/product
    *  **Body** puis sélectionner **raw** et choisir **JSON**.
 
 * **Résultat :**
