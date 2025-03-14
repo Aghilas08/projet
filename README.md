@@ -134,4 +134,4 @@ Le fichier **requirements.txt** est utilisé pour lister toutes les dépendances
 
 ![docker_img](./img/docker_img.png)
 
-* lancer en locale : ``docker run --name "my_app" -p 5000:5000 product_service``
+* lancer en locale : ``docker run --name "my_app" -p 4000:5000 product_service``
