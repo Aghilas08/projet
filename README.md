@@ -103,6 +103,7 @@ Ce microservice expose deux routes principales :
   * Ce message indique que le serveur a bien reçu et traité une requête POST sur /product avec succès (200)
 
 ## 3- Ajout de données
+
 ````python
 product = [    
     {"id": 1, "name": "PC", "price": 1200},
@@ -142,6 +143,7 @@ Le fichier **requirements.txt** est utilisé pour lister toutes les dépendances
 * lancer en locale : ``docker run --name "my_app" -p 8080:5000 product_service``
 
 * **Résultat :**
+
 ![run_app](./img/run_app.png)
 
 ## 4- Publier l'image docker
@@ -158,12 +160,14 @@ permet de stocker, partager des **images Docker**. Il sert principalement à :
 
 ###### Tag l'image docker :
 *  ``docker tag imageID yourDockerHubName/imageName:version``
+
 ````sh
 sudo docker tag 2eec3335c28e aghilasob/product_app:01
 ````
 
 ###### Login docker hub :
 * ``docker login``
+
 ````sh
 $ docker login
 username : 
@@ -172,10 +176,13 @@ password :
 
 ###### Pousser l'image vers docker hub : 
 * ``docker push yourDockerHubName/imageName:version``
+
 ````sh
 $ docker push aghilasob/product_app:01
 ````
 
+
 ![docker_hub](./img/docker_hub.png)
 
+****
 # Programme teste
