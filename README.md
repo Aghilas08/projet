@@ -137,6 +137,11 @@ Le fichier **requirements.txt** est utilisé pour lister toutes les dépendances
 * executer : ``docker build -t product_service . ``
 * Afficher les images docker : ``docker images``
 
-![docker_img]()
+![docker_container](./img/container.png)
 
 * lancer en locale : ``docker run --name "my_app" -p 8080:5000 product_service``
+
+* **Résultat :**
+![run_app](./img/run_app.png)
+
+## 4- Publier l'image docker
