@@ -83,6 +83,9 @@ Ce microservice expose deux routes principales :
 
 ![product_list0](./img/product000.png)
 
+* **log** : ``127.0.0.1 - - [13/Mar/2025 00:49:59] "GET / HTTP/1.1" 200 -``
+  * indique qu'une requête GET a été reçue et traitée avec succès (200).
+
 ## 2- Postman
 **Postman** est un outil qui permet de tester et d’interagir avec des API. Il facilite l’envoi de requêtes HTTP (GET, POST, PUT, DELETE) et l’affichage des réponses.
 
@@ -98,3 +101,42 @@ Ce microservice expose deux routes principales :
 
 * **log** : ``127.0.0.1 - - [13/Mar/2025 23:14:59] "POST /product HTTP/1.1" 200 -``
   * Ce message indique que le serveur a bien reçu et traité une requête POST sur /product avec succès (200)
+
+## 3- Ajout de données
+````python
+product = [    
+    {"id": 1, "name": "PC", "price": 1200},
+    {"id": 2, "name": "SAMSUNG S24", "price": 1300}
+]
+````
+****
+
+# Docker
+
+![docker](./img/docker1.png)
+
+## 1- Dockerfile
+Le code source est interprété au moment de l’exécution. Cela signifie que pour exécuter une application Python, on a besoin de :
+*  L’interpréteur Python
+*  Les fichiers source .py
+*  Les dépendances (ex: Flask, requests, etc...)
+*  Avantages de convertir le code Python en un binaire (exécutable) avant de le dockeriser :
+   *  Portabilité
+   *  Réduction de la taille de l’image Docker
+
+👉 [Dockerfile](Dockerfile)
+
+## 2- Gestion des dépendances
+
+Le fichier **requirements.txt** est utilisé pour lister toutes les dépendances nécessaires pour réliser ce TP.
+
+👉 [requirements](requirements.txt)
+
+## 3- Creation de l'image doker
+* se positioner dans **TP/**
+* executer : ``docker build -t product_service . ``
+* Afficher les images docker : ``docker images``
+
+![docker_img]()
+
+* lancer en locale : ``docker run --name "my_app" -p 8080:5000 product_service``

@@ -7,14 +7,17 @@ product_service = Flask("product_service")
 def home():
     return """
         <h1>Bienvenue sur le service des produits</h1>
-        <p>Consultez la liste des produits ici : <a href="http://127.0.0.1:5000/product">Liste des produits</a></p>
+        <p>Consultez la liste des produits ici : <a href="http://127.0.0.1:8080/product">Liste des produits</a></p>
     """
 
 
 # product_service
 
 # data == ma liste de produit
-product = []
+product = [    
+    {"id": 1, "name": "PC", "price": 1200},
+    {"id": 2, "name": "SAMSUNG S24", "price": 1300}
+]
 
 @product_service.route("/product" , methods = ["GET" , "POST"])
 def product_manager() :
