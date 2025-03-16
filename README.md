@@ -145,3 +145,34 @@ Le fichier **requirements.txt** est utilisé pour lister toutes les dépendances
 ![run_app](./img/run_app.png)
 
 ## 4- Publier l'image docker
+
+Lien 👉 : [Docker Hub](https://hub.docker.com/repository/docker/aghilasob/product_app/general)
+
+permet de stocker, partager des **images Docker**. Il sert principalement à :
+
+* **Stocker des images Docker**
+* **Partager des images :** Il permet de collaborer en partageant des images via des dépôts publics ou privés.
+* **Automatiser les builds :** peut automatiquement construire des images à partir d'un dépôt *GitHub*.
+* **Distribuer des conteneurs :** Les développeurs peuvent facilement tirer faire des **pull** et des **push** des images vers et depuis Docker Hub.
+**Accéder aux images officielles**
+
+###### Tag l'image docker :
+*  ``docker tag imageID yourDockerHubName/imageName:version``
+````sh
+sudo docker tag 2eec3335c28e aghilasob/product_app:01
+````
+
+###### Login docker hub :
+* ``docker login``
+````sh
+$ docker login
+username : 
+password :
+````
+
+###### Pousser l'image vers docker hub : 
+* ``docker push yourDockerHubName/imageName:version``
+````sh
+$ docker push aghilasob/product_app:01
+````
+![docker_hub](./img/docker_hub.png)
