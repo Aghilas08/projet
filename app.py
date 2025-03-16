@@ -26,7 +26,7 @@ def product_manager() :
     elif request.method == "POST" :
         data = request.get_json()
         product.append(data)
-        return jsonify({"message": "Product added", "user": data})
+        return jsonify({"message": "Product added", "product": data})
 
 
 if __name__ == "__main__" :
