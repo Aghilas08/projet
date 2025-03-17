@@ -16,7 +16,8 @@ def home():
 # data == ma liste de produit
 product = [    
     {"id": 1, "name": "PC", "price": 1200},
-    {"id": 2, "name": "SAMSUNG S24", "price": 1300}
+    {"id": 2, "name": "SAMSUNG S24", "price": 1300},
+    {"id": 3, "name": "MACBOOK", "price": 1450}
 ]
 
 @product_service.route("/product" , methods = ["GET" , "POST"])
