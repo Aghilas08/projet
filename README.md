@@ -186,3 +186,11 @@ $ docker push aghilasob/product_app:01
 
 ****
 # Programme teste
+
+👉 [test_app](test_app.py)
+
+L'utilisation de tests dans le développement d'une application, comme mon service Flask, est essentielle pour plusieurs raisons :
+* **Garantir le bon fonctionnement de l'application :** Vérifier que la route **/product** retourne bien une liste de produits.
+* **Automatiser les vérifications (CI/CD) :** Les tests sont souvent intégrés dans des pipelines CI/CD (GitHub Actions,etc.), ce qui permet :
+   *  De valider le code avant chaque déploiement
+   *  D’éviter les erreurs en production
