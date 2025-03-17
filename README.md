@@ -194,3 +194,19 @@ L'utilisation de tests dans le développement d'une application, comme mon servi
 * **Automatiser les vérifications (CI/CD) :** Les tests sont souvent intégrés dans des pipelines CI/CD (GitHub Actions,etc.), ce qui permet :
    *  De valider le code avant chaque déploiement
    *  D’éviter les erreurs en production
+
+# Pipline CI/CD
+
+👉 [action](.github\workflows\action.yml)
+
+###### Teste :
+
+![teste](./img/git.png)
+
+###### pull request :
+
+![pull_req](./img/git_teste.png)
+
+* **Récuperer la nouvelle version :** ``git pull origin master``
+  
+****
