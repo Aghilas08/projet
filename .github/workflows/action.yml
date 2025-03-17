@@ -1,0 +1,32 @@
+name: build & test CI 
+
+on:
+    - pull_request
+
+jobs:
+    build-and-test:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: verifier le code
+          uses: actions/checkout@v3
+
+        - name: set up python
+          uses: actions/setup-python@v4
+          with :
+            python-version: '3.13'
+
+        - name: installer les dependances
+          run: |
+            python -m pip install --upgrade pip
+            pip install flask
+            pip install pytest
+
+        - name: teste
+          run: |
+            pytest
+
+        - name: build Docker Image
+          run: |
+              docker build -t product_service .
+              docker images
