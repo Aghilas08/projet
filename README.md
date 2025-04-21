@@ -162,7 +162,7 @@ permet de stocker, partager des **images Docker**. Il sert principalement à :
 *  ``docker tag imageID yourDockerHubName/imageName:version``
 
 ````sh
-sudo docker tag 2eec3335c28e aghilasob/product_app:01
+sudo docker tag a9371ae2a2f2 aghilasob/product_app:01
 ````
 
 ###### Login docker hub :
