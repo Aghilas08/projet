@@ -32,3 +32,43 @@ spec:
       port: 80          
       targetPort: 5000  
   type: LoadBalancer    
+
+---
+# gateway
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: product-gateway
+spec:
+  selector:
+    istio: ingressgateway   # Utilise l’Istio ingress gateway
+  servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - "*"
+---
+# virtual service
+
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: product-virtualservice
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - product-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /product
+        - uri:
+            exact: /
+      route:
+        - destination:
+            host: product-service
+            port:
+              number: 80

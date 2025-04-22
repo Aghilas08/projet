@@ -236,3 +236,82 @@ minikube service product-service
 ![teste](/img/test_dep.png)
 
 ****
+
+# Mettre en place une Gateway
+
+**Linge 37 ::** 👉 [depoyment](deployment.yml)
+
+````
+en utilisant istio
+        |\          
+        | \         
+        |  \        
+        |   \       
+      /||    \      
+     / ||     \     
+    /  ||      \    
+   /   ||       \   
+  /    ||        \  
+ /     ||         \ 
+/______||__________\
+____________________
+  \__       _____/  
+     \_____/        
+
+# Installation :
+
+curl -L https://istio.io/downloadIstio | sh -
+cd istio-1.25.2
+export PATH=$PWD/bin:$PATH 
+istioctl install --set profile=demo -y 
+````
+
+* **Appliquer la configuration :**
+````sh
+kubectl apply -f deployment.yml
+````      
+* **Obtenir l’adresse IP externe :**
+````sh
+kubectl get svc istio-ingressgateway -n istio-system
+````
+
+![gw](/img/gw.png)
+
+****
+
+# Teste
+
+* ``kubectl -n istio-system port-forward svc/istio-ingressgateway 8080:80``
+
+![ports](/img/ports.png)
+
+* **Teste via le navigateur :**
+
+````
+http://localhost:8080/
+http://localhost:8080/produc
+````
+
+![teste_navigateur](/img/navigateur.png)
+
+****
+
+# Grafana
+
+* **s'assurer d'abord d'ajouters les addons :** ``istioctl install --set profile=demo -y``
+  
+* **l'activer :** 
+````
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.20/samples/addons/grafana.yaml
+
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.20/samples/addons/prometheus.yaml
+````
+
+* **Acceder a Grafana en local :**``kubectl port-forward -n istio-system svc/grafana 3000:3000``
+   *  **via :** http://localhost:3000
+
+
+![grafana_perf](/img/perf.png)
+
+# FIN
+****
