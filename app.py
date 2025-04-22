@@ -6,8 +6,15 @@ product_service = Flask("product_service")
 @product_service.route("/", methods=["GET"])
 def home():
     return """
-        <h1>Bienvenue sur le service des produits</h1>
-        <p>Consultez la liste des produits ici : <a href="http://127.0.0.1:8080/product">Liste des produits</a></p>
+        <html>
+            <head><title>Service Produits</title></head>
+            <body style="font-family: Arial; padding: 20px;">
+                <h1>Bienvenue sur le service des produits</h1>
+                <p>Consultez la liste des produits ici :
+                <a href="/product">Liste des produits</a>
+                </p>
+            </body>
+        </html>
     """
 
 

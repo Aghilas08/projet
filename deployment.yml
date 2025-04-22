@@ -2,9 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: product-service-deployment
-  version: "1.0"
 spec:
-  replicas: 2  # nbr de replication                     
+  replicas: 2
   selector:
     matchLabels:
       app: product-service
@@ -14,10 +13,11 @@ spec:
         app: product-service
     spec:
       containers:
-      - name: product-service
-        image: aghilasob/product_app:01
-        ports:
-        - containerPort: 5000  # Port sur  app coute dans le container
+        - name: product-service
+          image: aghilasob/product_app:01
+          imagePullPolicy: Always   
+          ports:
+            - containerPort: 5000
 
 ---
 apiVersion: v1
@@ -28,7 +28,7 @@ spec:
   selector:
     app: product-service
   ports:
-  - protocol: TCP
-    port: 80        # Port d'exposition externe
-    targetPort: 5000  # Redirection vers le port interne du container
-  type: LoadBalancer 
+    - protocol: TCP
+      port: 80          
+      targetPort: 5000  
+  type: LoadBalancer    

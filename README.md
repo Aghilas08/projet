@@ -162,7 +162,7 @@ permet de stocker, partager des **images Docker**. Il sert principalement à :
 *  ``docker tag imageID yourDockerHubName/imageName:version``
 
 ````sh
-sudo docker tag a9371ae2a2f2 aghilasob/product_app:01
+sudo docker tag 434b2108b89b aghilasob/product_app:01
 ````
 
 ###### Login docker hub :
@@ -209,4 +209,30 @@ L'utilisation de tests dans le développement d'une application, comme mon servi
 
 * **Récuperer la nouvelle version :** ``git pull origin master``
   
+****
+# Dépoloiment
+
+👉 [depoyment](deployment.yml)
+
+### Minikube
+````sh
+minikube start --driver=docker
+minikube dashboard
+````
+### Deployer le service product 
+````sh
+kubectl apply -f deployment.yml
+````
+
+* **Verification :**
+
+![dep_service](/img/deploymnt.png)
+
+* **Lancer le service :**
+````sh
+minikube service product-service
+````
+
+![teste](/img/test_dep.png)
+
 ****
