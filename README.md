@@ -212,7 +212,7 @@ L'utilisation de tests dans le développement d'une application, comme mon servi
 ****
 # Dépoloiment
 
-👉 [depoyment](deployment.yml)
+👉 [deployment](deployment.yml)
 
 ### Minikube
 ````sh
@@ -239,7 +239,7 @@ minikube service product-service
 
 # Mettre en place une Gateway
 
-**Linge 37 ::** 👉 [depoyment](deployment.yml)
+**Linge 37 ::** 👉 [deployment](deployment.yml)
 
 ````
 en utilisant istio
